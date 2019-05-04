@@ -10,7 +10,9 @@ const BiometryController = require('./controllers/BiometryController');
 routes.post("/nurserys", NurseryController.store);
 routes.get("/nurserys/:id", NurseryController.show);
 
+
 routes.post("/biometrys", BiometryController.store);
+routes.get("/biometrys", BiometryController.index);
 routes.get("/biometrys/:id", BiometryController.show);
 routes.put("/biometrys/:id", BiometryController.update);
 routes.delete("/biometrys/:id", BiometryController.destroy);

@@ -2,6 +2,12 @@ const Biometry = require('../models/Biometry');
 
 class BiometryController {
 
+    async index(req, res) {
+        const biometrys = await Biometry.find();
+
+        return res.json(biometrys);
+    }
+
     async store (req, res) {
         const biometry = await Biometry.create(req.body);
         
