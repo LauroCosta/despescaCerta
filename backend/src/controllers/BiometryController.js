@@ -22,16 +22,11 @@ class BiometryController {
         return res.json(biometry);
     },
 
-    
     async destroy(req, res){
-
         await Biometry.findByIdAndRemove(req.params.id);
 
         return res.send();
     }
-
-
-
 }
 
 module.exports = new BiometryController();
