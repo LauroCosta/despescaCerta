@@ -1,6 +1,6 @@
 const express = require("express");
 
-//Permitindo que eu possa criar rodas
+//Permitindo que eu possa criar rotas
 const routes = express.Router();
 
 const NurseryController = require('./controllers/NurseryController');
