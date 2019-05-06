@@ -20,10 +20,10 @@ export default class Main extends Component {
     
     const response = await api.post('biometrys',{
 
-        nurseryNumber: '2',
-        shirimpCount: '2',
-        sampleWeight: '211',
-        grammage: '1234'
+        nurseryNumber: this.state.nurseryNumber,
+        shirimpCount: this.state.shirimpCount,
+        sampleWeight: this.state.sampleWeight,
+        grammage: this.state.sampleWeight/this.state.shirimpCount
         
     })
     console.log(response.data);
@@ -31,8 +31,9 @@ export default class Main extends Component {
   
  handleInputChange = e => {
 
-    this.setState({ nurseryNumber: e.target.value })
-    this.setState({ shirimpCount: e.target.value })
+    this.setState({ nurseryNumber: e.target.value.id, shirimpCount: e.target.value.id, sampleWeight: e.target.value.id })
+    //this.setState({ .id })
+    //this.setState({ .id })
  }
   
 
@@ -41,7 +42,7 @@ export default class Main extends Component {
 
         <div id="main-container">
             <form onSubmit={this.handleSubmit} >
-                <img src={logo} alt=""/>
+                <img src={logo} size={30} alt=""/>
 
                 <h1>Biometria</h1>
                 
