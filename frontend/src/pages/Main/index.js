@@ -16,14 +16,13 @@ export default class Main extends Component {
   
  handleSubmit = async e => {
     e.preventDefault();
-
     
     const response = await api.post('biometrys',{
 
-        nurseryNumber: this.state.nurseryNumber,
-        shirimpCount: this.state.shirimpCount,
-        sampleWeight: this.state.sampleWeight,
-        grammage: this.state.sampleWeight/this.state.shirimpCount
+        nurseryNumber: "1",
+        shirimpCount: "2",
+        sampleWeight: "3",
+        grammage: "4"
         
     })
     console.log(response.data);
@@ -31,7 +30,12 @@ export default class Main extends Component {
   
  handleInputChange = e => {
 
-    this.setState({ nurseryNumber: e.target.value.id, shirimpCount: e.target.value.id, sampleWeight: e.target.value.id })
+    this.setState({ 
+      
+      nurseryNumber: e.target.value
+    
+    
+    });
     //this.setState({ .id })
     //this.setState({ .id })
  }
