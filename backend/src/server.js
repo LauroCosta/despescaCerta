@@ -40,4 +40,4 @@ app.use((req, res, next) =>{
 app.use(express.json());
 app.use(require("./routes"));
 
-app.listen(process.env.PORT || 3300);
+app.listen(process.env.PORT || 3000);
