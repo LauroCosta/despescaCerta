@@ -1,17 +1,39 @@
+body{
+
+    background-color: #ddd;
+    overflow: hidden;
+}
 
 
 #login-container {
-    height: 100%;
 
+    width: 400px; 
+    height: 540px;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin-left: calc(50vw - 160px);
+    margin-top: 70px;
+    border-radius: 8px;
+    box-shadow: black;
+    box-shadow: 0px 0px 7px  #797979;
+}
+
+hr {
+
+    opacity: 0.4;
+    width: 300px;
+    margin: 30px 0px 30px 0px;
 }
 
 #login-container form {
 
     width:300px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     
 }
@@ -19,12 +41,26 @@
 #login-container form input {
 
     height: 48px;
+    width: 300px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
     padding: 0 15px;
     margin-top: 10px;
 
+}
+
+#login-container form img {
+
+    width: 60%;
+    margin: 20px;
+ 
+}
+
+.button-google {
+
+    margin: 0 !important;
+    background-color: aquamarine !important;
 }
 
 #login-container form label {
@@ -35,9 +71,10 @@
 }
 
 
-#login-container form button{
+#buttonlogin{
 
     height: 48px;
+    width: 300px;
     background: #58FA58;
     border-radius: 4px;
     font-size: 16px;
@@ -49,6 +86,26 @@
     cursor: pointer;
 }
 
+#buttongoogle{
+
+    height: 48px;
+    width: 300px;
+    background: rgb(238, 238, 238);
+    background-image: url(./icon-google.png);
+    background-position: 12px;
+    background-repeat: no-repeat; 
+    border-radius: 4px;
+    font-size: 16px;
+    color:black;
+    font-weight: 400;
+    border: 0;
+    cursor: pointer;
+}
+
+#buttongoogle:hover {
+
+    opacity: 0.6;
+}
 
 #login-container form button:hover {
 
