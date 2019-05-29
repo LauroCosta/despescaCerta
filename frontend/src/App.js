@@ -1,12 +1,9 @@
 import React from 'react';
-import './App.css';
-import Main from './pages/Main';
-import BiometricsList from './pages/BiometricsList';
+import "./App.css";
+
+import Login from "./pages/Login";
 
 
-
-function App() {
-  return <BiometricsList />;
-}
+const App = () => <Login />;
 
 export default App;
