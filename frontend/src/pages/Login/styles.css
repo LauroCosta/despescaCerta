@@ -1,6 +1,6 @@
 body{
 
-    background-color: #ddd;
+    background-color: #5ca47a !important;
     overflow: hidden;
 }
 
@@ -75,7 +75,7 @@ hr {
 
     height: 48px;
     width: 300px;
-    background: #58FA58;
+    background: #5ca47a;
     border-radius: 4px;
     font-size: 16px;
     padding: 0 5px;

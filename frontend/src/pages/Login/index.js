@@ -16,6 +16,8 @@ class Login extends Component {
     
     const { user, signOut, signInWithGoogle } = this.props;
 
+  
+
     return (
       <div>
 
@@ -37,17 +39,19 @@ class Login extends Component {
 
 
             </form>
-
+            
+        
+            
             {
               <button id="buttongoogle" onClick={signInWithGoogle}>Logar com conta do google</button>
-              
-
+          
             }
-                        
+
+                      
         </div>
       
       </div>
-
+  
 
     );
   }

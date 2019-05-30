@@ -1,6 +1,8 @@
+
 import React, { Component } from 'react';
 
-import  './styles.css';
+
+import './styles.css';
 import './css/light-bootstrap-dashboard.css';
 import './css/pe-icon-7-stroke.css';
 import './css/bootstrap.min.css';
@@ -13,6 +15,7 @@ export default class Home extends Component {
  };
   
  render() {
+
     return (
     <div>
         <div class="wrapper">
@@ -85,8 +88,8 @@ export default class Home extends Component {
 
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
-                                    <a href="#">
-                                        <p>Log out</p>
+                                    <a>
+                                        <p>Sair</p>
                                     </a>
                                 </li>
                                 <li class="separator hidden-lg"></li>
