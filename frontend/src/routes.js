@@ -3,10 +3,11 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from './pages/Home';
-
+import Main from './pages/Main';
+import BiometricsList from "./pages/BiometricsList";
 
 function isAuthenticated(){
-    return false;
+    return true;
 }
 
 
@@ -29,6 +30,8 @@ const Routes = () => (
         <Switch>
             <Route path="/" exact component={ Login } />
             <PrivateRoute path="/home" exact component={ Home } />
+            <PrivateRoute path="/main" exact component={ Main } />
+            <PrivateRoute path="/biometrics" exact component={ BiometricsList } />
         </Switch>
     </BrowserRouter>
 );

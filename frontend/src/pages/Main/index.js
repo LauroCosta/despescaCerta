@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import api from "../../services/api";
 
 
-import logo from "../../assets/logo.svg";
+
 import  './styles.css';
+import { Redirect } from "react-router-dom";
 
 export default class Main extends Component {
  state = {
@@ -19,25 +20,26 @@ export default class Main extends Component {
     
     const response = await api.post('biometrys',{
 
-        nurseryNumber: "1",
-        shirimpCount: "2",
-        sampleWeight: "3",
-        grammage: "4"
+        'nurseryNumber': this.state.nurseryNumber,
+        'shirimpCount': this.state.shirimpCount,
+        'sampleWeight': this.state.sampleWeight,
+        'grammage': this.state.sampleWeight / this.state.shirimpCount
         
     })
-    console.log(response.data);
+
  } 
   
  handleInputChange = e => {
 
     this.setState({ 
       
-      nurseryNumber: e.target.value
+      nurseryNumber: e.target.value["numero"],
+      shirimpCount: e.target.value["quantidade"],
+      sampleWeight: e.target.value["amostra"]
     
     
     });
-    //this.setState({ .id })
-    //this.setState({ .id })
+  
  }
   
 
@@ -46,26 +48,25 @@ export default class Main extends Component {
 
         <div id="main-container">
             <form onSubmit={this.handleSubmit} >
-                <img src={logo} size={30} alt=""/>
 
                 <h1>Biometria</h1>
                 
 
                 <label>Viveiro</label>
-                <input type="number"
+                <input type="number" name="viveiro" min="0" max="30"
                   placeholder= "Número do viveiro"
                   value={this.state.nurseryNumber}
                   onChange={this.handleInputChange}
                 />
 
                 <label>Quantidade Camarão</label>
-                <input type="number"
+                <input type="number" name="quantidade" min="0" max="400"
                   placeholder= "Quant. camarões"
                   value={this.state.shirimpCount}
                   onChange={this.handleInputChange}
                 />
                 <label>Peso amostra (gramas) </label>
-                <input type="number"
+                <input type="number" name="Amostra" min="0" max="400"
                   placeholder= "Peso amostra"
                   value={this.state.sampleWeight}
                   onChange={this.handleInputChange}
